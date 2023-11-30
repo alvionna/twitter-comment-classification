@@ -21,8 +21,8 @@ As we can see from the pictures below, the data distribution is right-skewed. So
 - Since it's right-skewed, the model will predict better on data points with lower value compared to those with higher values
 - With these facts in mind, we will see how the skewness affect the result.
 
-![data distribution](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/data-dist.png?raw=true)
-![the length of the tweet for each feeling](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/feeling-length.png?raw=true)
+![data distribution](https://github.com/alvionna/twitter-comment-classification/blob/main/images/data-dist.png)
+![the length of the tweet for each feeling](https://github.com/alvionna/twitter-comment-classification/blob/main/images/feeling-length.png)
 
 ## Data Preprocessing
 
@@ -49,12 +49,12 @@ To build the optimal KNN, we experimented with 2 methods to choose the best valu
 1. Elbow Method
    - We plot each iteration of _k_ with the error rate at that _k_ and choose the _k_ that yields the lowest error rate.
    - Using this method, we found that _k = 11_
-     ![elbow-knn-graph](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/knn-elbow.png?raw=true)
+     ![elbow-knn-graph](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn-elbow.png)
 2. Cross Validation Method
    - This time, we decided to use Cross Validation to found the best _k_ by plotting each iteration of _k_ against the accuracy rate.
    - The value of _k_ that yields the highest accuracy will be the best _k_
    - Using this method, we found that _k = 8_
-     ![cv-knn-graph](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/knn-cv.png?raw=true)
+     ![cv-knn-graph](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn-cv.png)
 
 ### Random Forest
 
@@ -84,6 +84,8 @@ To build the optimal Random Forest model, we experimented with the model:
                            scoring = "accuracy")
      ```
 
+   - Best Parameters: {'max_depth': 20, 'min_samples_leaf': 5, 'n_estimators': 25}
+
 ### Support Vector Machine (SVM)
 
 Similar to Random Forest, to build the optimal SVM model, we experimented with the model:
@@ -111,6 +113,8 @@ Similar to Random Forest, to build the optimal SVM model, we experimented with t
                       verbose = 1)
      ```
 
+   - Best Parameters: {'C': 10, 'degree': 1, 'gamma': 1, 'kernel': 'sigmoid'}
+
 ## Results
 
 We will report the Accuracy, Precision, Recall, and F1 Score values and display the confusion matrix
@@ -122,13 +126,13 @@ We will report the Accuracy, Precision, Recall, and F1 Score values and display 
    - Precision Score: 0.7325349301397206
    - Recall Score: 0.7325349301397206
    - F1 Score: 0.7325349301397206
-     ![elbow-knn-confusion-matrix](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/knn_elbow_cm.png?raw=true)
+     ![elbow-knn-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn_elbow_cm.png)
 2. CV Method:
    - Accuracy Score: 0.7145708582834331
    - Precision Score: 0.7145708582834331
    - Recall Score: 0.7145708582834331
    - F1 Score: 0.7145708582834331
-     ![cv-knn-confusion-matrix](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/knn_cv_cm.png?raw=true)
+     ![cv-knn-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn_cv_cm.png)
 
 ### Random Forest
 
@@ -137,14 +141,13 @@ We will report the Accuracy, Precision, Recall, and F1 Score values and display 
    - Precision Score: 0.430139720558882
    - Recall Score: 0.4301397205588822
    - F1 Score: 0.4301397205588822
-     ![rf-ori-confusion-matrix](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/rf_ori_cm.png?raw=true)
+     ![rf-ori-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/rf_ori_cm.png)
 2. With Grid Search:
-   - Best Parameters: {'max_depth': 20, 'min_samples_leaf': 5, 'n_estimators': 25}
    - Accuracy Score: 0.5858283433133733
    - Precision Score: 0.5858283433133733
    - Recall Score: 0.5858283433133733
    - F1 Score: 0.5858283433133733
-     ![rf-gridsearch-confusion-matrix](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/rf_gridsearch_cm.png?raw=true)
+     ![rf-gridsearch-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/rf_gridsearch_cm.png)
 
 ### Support Vector Machine
 
@@ -154,16 +157,15 @@ We will report the Accuracy, Precision, Recall, and F1 Score values and display 
 - Precision Score: 0.7894211576846307
 - Recall Score: 0.7894211576846307
 - F1 Score: 0.7894211576846307
-  ![svm-ori-confusion-matrix](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/svm_ori_cm.png?raw=true)
+  ![svm-ori-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/svm_ori_cm.png)
 
 2. With Grid Search:
 
-- Best Parameters: {'C': 10, 'degree': 1, 'gamma': 1, 'kernel': 'sigmoid'}
 - Accuracy Score: 0.8977045908183633
 - Precision Score: 0.8977045908183633
 - Recall Score: 0.8977045908183633
 - F1 Score: 0.8977045908183633
-  ![svm-gridsearch-confusion-matrix](https://github.com/[alvionna]/[twitter-comment-classification]/blob/[images]/svm_gridsearch_cm.png?raw=true)
+  ![svm-gridsearch-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/svm_gridsearch_cm.png)
 
 ## Conclusion and Discussion
 
