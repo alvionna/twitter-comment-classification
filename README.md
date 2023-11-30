@@ -171,7 +171,15 @@ We will report the Accuracy, Precision, Recall, and F1 Score values and display 
 
 1. SVM with `GridSearch` yields the best result with accuracy of 89%
 2. Random Forest yields the worst result among the models with accuracy of 43% without hyperparameter tuning and accuracy of 58% with `GridSearch`
+
+- Due to the username and tags present in each tweet, the data was difficult to preprocess. As a result, words that have no meaning were present in the `refined_tweet` and lead to a sparser data. However, Random Forest works better on dataset that has lower dimensionality.
+- Because of the reason above, Random Forest may also fail to capture and exploit the underlying patterns effectively.
+- Therefore, The importance of specific words or features in the text is not captured well by Random Forest.
+
 3. `GridSearch` improves the performance of the model
+
+- `GridSearch` helps the model to find the best parameters that yield the best result. Therefore, it improves the performance of the model
+
 4. KNN with Cross Validation yields poorer result than KNN without Cross Validation
 
 ## In-Progress
