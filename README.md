@@ -47,7 +47,7 @@ We decided to split the dataset into a 80:20 ratio for training and testing.
 To build the optimal KNN, we experimented with 2 methods to choose the best value of _k_ where we arbitrarily set the max _k_ = 15.
 
 1. Elbow Method
-   - We plot each iteration of _k_ with the error rate at that _k_ and choose the _k_ that yields the lowest error rate.
+   - We plot each iteration of _k_ with the accuracy rate at that _k_ and choose the _k_ that yields the highest accuracy rate.
    - Using this method, we found that _k = 11_
      ![elbow-knn-graph](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn-elbow.png)
 2. Cross Validation Method
