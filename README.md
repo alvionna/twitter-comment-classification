@@ -1,4 +1,4 @@
-# twitter-comment-classification
+# twitter-sentiment-classification
 
 ## About the Project
 
@@ -180,7 +180,9 @@ We will report the Accuracy, Precision, Recall, and F1 Score values and display 
 
    - `GridSearch` helps the model to find the best parameters that yield the best result. Therefore, it improves the performance of the model
 
-4. KNN with Cross Validation yields poorer result than KNN without Cross Validation
+4. KNN with optimal _k_ found using Cross Validation yields poorer result than KNN with optimal _k_ found using Elbow Method
+   - This may be caused for several reasons. One of the biggest reasons that may be the cause behind this phenomena is the **noise in the data**.
+   - The data contains many unnecessary characters and emojis and, while we have pre-processed it, there are many words that hold no meaning in each tweet. This is due to several reasons, including the inclusion of username and the usage of abbreviations where the model doesn't understand the meaning behind it.
 
 ## In-Progress
 
