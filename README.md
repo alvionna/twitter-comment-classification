@@ -183,6 +183,8 @@ We will report the Accuracy, Precision, Recall, and F1 Score values and display 
 4. KNN with optimal _k_ found using Cross Validation yields poorer result than KNN with optimal _k_ found using Elbow Method
    - This may be caused for several reasons. One of the biggest reasons that may be the cause behind this phenomena is the **noise in the data**.
    - The data contains many unnecessary characters and emojis and, while we have pre-processed it, there are many words that hold no meaning in each tweet. This is due to several reasons, including the inclusion of username and the usage of abbreviations where the model doesn't understand the meaning behind it.
+   - Moreover, the data wasn't exclusively english and we didn't filter the tweets that were in another language, adding more noise in the data.
+     ![before-after-data-preprocessing](https://github.com/alvionna/twitter-comment-classification/blob/main/images/before_after_preprocess.png)
 
 ## In-Progress
 
