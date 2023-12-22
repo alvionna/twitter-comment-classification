@@ -37,7 +37,7 @@ There are 3 folders on this repository: `data`, `images`, and `src`
 5. Done with the discussion and observations of the perfomance of the different models
 6. Should start on Deep Learning Models (to compare the performance between statistical/traditional ML models and Neural Network-based models)
 
-## Experiment & Result
+## Experiment
 
 ### Data Analysis
 
@@ -146,11 +146,11 @@ Similar to Random Forest, to build the optimal SVM model, I experimented with th
 
    - Best Parameters: {'C': 10, 'degree': 1, 'gamma': 1, 'kernel': 'sigmoid'}
 
-### Results
+## Results
 
 I will report the Accuracy, Precision, Recall, and F1 Score values and display the confusion matrix
 
-#### KNN
+### KNN
 
 1. Elbow Method:
    - Accuracy Score: 0.7325349301397206
@@ -165,7 +165,7 @@ I will report the Accuracy, Precision, Recall, and F1 Score values and display t
    - F1 Score: 0.7145708582834331
      ![cv-knn-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn_cv_cm.png)
 
-#### Random Forest
+### Random Forest
 
 1. Without Hyperparameter Tuning:
    - Accuracy Score: 0.4301397205588822
@@ -180,7 +180,7 @@ I will report the Accuracy, Precision, Recall, and F1 Score values and display t
    - F1 Score: 0.5858283433133733
      ![rf-gridsearch-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/rf_gridsearch_cm.png)
 
-#### Support Vector Machine
+### Support Vector Machine
 
 1. Without Hyperparameter Tuning:
 
@@ -198,7 +198,7 @@ I will report the Accuracy, Precision, Recall, and F1 Score values and display t
    - F1 Score: 0.8977045908183633
      ![svm-gridsearch-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/svm_gridsearch_cm.png)
 
-### Conclusion and Discussion
+## Conclusion and Discussion
 
 1. SVM with `GridSearch` yields the best result with accuracy of 89%
 2. Random Forest yields the worst result among the models with accuracy of 43% without hyperparameter tuning and accuracy of 58% with `GridSearch`
