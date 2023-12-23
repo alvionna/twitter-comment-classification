@@ -2,7 +2,7 @@
 
 ## Overview
 
-I build 3 classification Machine Learning models: k-Nearest Neighbour (kNN), Support Vector Machine (SVM), and Random Forest, to classify twitter comments into 6 categories: happy, sad, angry, fear, disgust, and surprise
+I build 3 classification Machine Learning models: k-Nearest Neighbour (kNN), Support Vector Machine (SVM), and Random Forest, to classify 10,000+ twitter comments into 6 categories: happy, sad, angry, fear, disgust, and surprise
 
 ### Data Sources
 
