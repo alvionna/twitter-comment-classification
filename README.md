@@ -21,12 +21,12 @@ There are 3 folders on this repository: `data`, `images`, and `src`
 
 1. Data Prerprocessing
    - How to process text data, such as removing stopwords, lemmatization, and tokenize the text.
-2. Learn about statistical ML models: KNN, Random Forest, and KNN
+2. Learn about statistical ML models: KNN, Random Forest, and SVM
    - Exploring the performance of different models with text as input
-   - Application of Elbow Method
+   - Application of Elbow Method in KNN
    - Application of `GridSearchCV`
 3. Start getting into a habit of doing Exploratory Data Analysis (EDA)
-   - From here, I learned a lot about the data so that I can use the data properly
+   - By doing EDA, I learned about the data so that I can use and process the data properly
 
 ## My Progress
 
