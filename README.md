@@ -153,55 +153,55 @@ I will report the Accuracy, Precision, Recall, and F1 Score values and display t
 ### KNN
 
 1. Elbow Method:
-   - Accuracy Score: 0.7325349301397206
-   - Precision Score: 0.7325349301397206
-   - Recall Score: 0.7325349301397206
-   - F1 Score: 0.7325349301397206
+   - Accuracy Score: 0.7440119760479041
+   - Precision Score: 0.7474457613013806
+   - Recall Score: 0.7440119760479041
+   - F1 Score: 0.7411991095791788
      ![elbow-knn-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn_elbow_cm.png)
 2. CV Method:
-   - Accuracy Score: 0.7145708582834331
-   - Precision Score: 0.7145708582834331
-   - Recall Score: 0.7145708582834331
-   - F1 Score: 0.7145708582834331
+   - Accuracy Score: 0.7395209580838323
+   - Precision Score: 0.7443619815274907
+   - Recall Score: 0.7395209580838323
+   - F1 Score: 0.735470838209233
      ![cv-knn-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/knn_cv_cm.png)
 
 ### Random Forest
 
 1. Without Hyperparameter Tuning:
-   - Accuracy Score: 0.4301397205588822
-   - Precision Score: 0.430139720558882
-   - Recall Score: 0.4301397205588822
-   - F1 Score: 0.4301397205588822
+   - Accuracy Score: 0.41916167664670656
+   - Precision Score: 0.7199118120527671
+   - Recall Score: 0.41916167664670656
+   - F1 Score: 0.2625879767872523
      ![rf-ori-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/rf_ori_cm.png)
 2. With Grid Search:
-   - Accuracy Score: 0.5858283433133733
-   - Precision Score: 0.5858283433133733
-   - Recall Score: 0.5858283433133733
-   - F1 Score: 0.5858283433133733
+   - Accuracy Score: 0.5409181636726547
+   - Precision Score: 0.7745803915835068
+   - Recall Score: 0.5409181636726547
+   - F1 Score: 0.4678306182097219
      ![rf-gridsearch-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/rf_gridsearch_cm.png)
 
 ### Support Vector Machine
 
 1. Without Hyperparameter Tuning:
 
-   - Accuracy Score: 0.7894211576846307
-   - Precision Score: 0.7894211576846307
-   - Recall Score: 0.7894211576846307
-   - F1 Score: 0.7894211576846307
+   - Accuracy Score: 0.7884231536926147
+   - Precision Score: 0.8500067519987117
+   - Recall Score: 0.7884231536926147
+   - F1 Score: 0.7805178246727311
      ![svm-ori-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/svm_ori_cm.png)
 
 2. With Grid Search:
 
-   - Accuracy Score: 0.8977045908183633
-   - Precision Score: 0.8977045908183633
-   - Recall Score: 0.8977045908183633
-   - F1 Score: 0.8977045908183633
+   - Accuracy Score: 0.8997005988023952
+   - Precision Score: 0.9046373345685739
+   - Recall Score: 0.8997005988023952
+   - F1 Score: 0.8990775810792297
      ![svm-gridsearch-confusion-matrix](https://github.com/alvionna/twitter-comment-classification/blob/main/images/svm_gridsearch_cm.png)
 
 ## Conclusion and Discussion
 
-1. SVM with `GridSearch` yields the best result with accuracy of 89%
-2. Random Forest yields the worst result among the models with accuracy of 43% without hyperparameter tuning and accuracy of 58% with `GridSearch`
+1. SVM with `GridSearch` yields the best result with accuracy of ~89%
+2. Random Forest yields the worst result among the models with accuracy of ~41% without hyperparameter tuning and accuracy of ~54% with `GridSearch`
 
    - Due to the username and tags present in each tweet, the data was difficult to preprocess. As a result, words that have no meaning were present in the `refined_tweet` and lead to a sparser data. However, Random Forest works better on dataset that has lower dimensionality.
    - Because of the reason above, Random Forest may also fail to capture and exploit the underlying patterns effectively.
